@@ -1,0 +1,32 @@
+{
+  "name": "cypress-kafka",
+  "version": "1.0.0",
+  "description": "Automatizando topicos do kafka com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoluizcassiano/cypress-kafka.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/integration/**/*.js"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/brunoluizcassiano/cypress-kafka/issues"
+  },
+  "homepage": "https://github.com/brunoluizcassiano/cypress-kafka#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.2",
+    "cypress": "12.17.4",
+    "kafkajs": "^2.2.4",
+    "typescript": "^5.5.4"
+  }
+}
