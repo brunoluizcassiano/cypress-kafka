@@ -24,12 +24,28 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('getListTopics', () => {
+    return cy.task('getListTopics')
+});
+
 Cypress.Commands.add('consumeKafkaGetPartitionCount', (topic) => {
-    return cy.task('consumeKafkaGetPartitionCount', { topic })
+    return cy.task('consumeKafkaGetPartitionCount', topic)
 });
 
 Cypress.Commands.add('consumeKafkaGetLatesOffset', (topic, partition) => {
     return cy.task('consumeKafkaGetLatesOffset', { topic, partition })
+});
+
+Cypress.Commands.add('fetchConsumerGroupOffsets', (topic) => {
+    return cy.task('fetchConsumerGroupOffsets', topic)
+});
+
+Cypress.Commands.add('listGroups', () => {
+    return cy.task('listGroups')
+});
+
+Cypress.Commands.add('deleteGroups', (groupId) => {
+    return cy.task('deleteGroups', groupId)
 });
 
 Cypress.Commands.add('consumeFromSpecificOffset', (topic, partition, offsetst) => {

@@ -4,7 +4,7 @@ import AppDriverKafka from './kafka._appDriver';
 const appDriverKafka = new AppDriverKafka;
 
 Given("que foi realizado uma comunicacao", () => {
-    appDriverKafka.getMessageTopic('customer_topic');
+    appDriverKafka.getMessageTopic();
 })
 
 When("a transacao esta no topico", () => {
